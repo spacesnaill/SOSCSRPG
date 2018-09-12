@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-     public class Player : INotifyPropertyChanged
+     public class Player : BaseNotificationClass
      {
           private string _name;
           private string _characterClass;
@@ -33,7 +33,7 @@ namespace Engine.Models
                get { return _characterClass; }
                set
                {
-                    _name = value;
+                    _characterClass = value;
                     OnPropertyChanged(nameof(CharacterClass));
                }
           }
@@ -78,11 +78,5 @@ namespace Engine.Models
                }
           }
 
-          public event PropertyChangedEventHandler PropertyChanged;
-
-          protected virtual void OnPropertyChanged(String propertyName)
-          {
-               PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-          }
      }
 }
