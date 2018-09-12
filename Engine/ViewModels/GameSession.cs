@@ -11,8 +11,11 @@ namespace Engine.ViewModels
      {
           public Player CurrentPlayer { get; set; }
 
+          public Location CurrentLocation { get; set; }
+
           public GameSession()
           {
+               //---Player Info---
                CurrentPlayer = new Player();
                CurrentPlayer.Name = "Patrick";
                CurrentPlayer.CharacterClass = "Fighter";
@@ -20,6 +23,13 @@ namespace Engine.ViewModels
                CurrentPlayer.Gold = 1000000;
                CurrentPlayer.ExperiencePoints = 0;
                CurrentPlayer.Level = 1;
+
+               //---Location Info---
+               CurrentLocation = new Location();
+               CurrentLocation.Name = "Home";
+               CurrentLocation.XCoordinate = 0;
+               CurrentLocation.YCoordinate = -1;
+               CurrentLocation.Description = "This is your House.";
           }
      }
 }
