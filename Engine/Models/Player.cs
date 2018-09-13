@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Engine.Models
+﻿namespace Engine.Models
 {
      public class Player : BaseNotificationClass
      {
@@ -77,6 +70,5 @@ namespace Engine.Models
                     OnPropertyChanged(nameof(Gold));
                }
           }
-
      }
 }

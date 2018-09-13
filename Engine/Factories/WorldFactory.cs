@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Engine.Models;
+﻿using Engine.Models;
 
 namespace Engine.Factories
 {
@@ -21,8 +16,8 @@ namespace Engine.Factories
                     "This is the house of your neighbor, Farmer Ted.",
                     "/Engine;component/Images/Locations/Farmhouse.png");
 
-               newWorld.AddLocation(0, -1, "Home", 
-                    "This is your home", 
+               newWorld.AddLocation(0, -1, "Home",
+                    "This is your home",
                     "/Engine;component/Images/Locations/Home.png");
 
                newWorld.AddLocation(-1, 0, "Trading Shop",
