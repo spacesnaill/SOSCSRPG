@@ -1,4 +1,6 @@
-﻿namespace Engine.Models
+﻿using System.Collections.ObjectModel;
+
+namespace Engine.Models
 {
      public class Player : BaseNotificationClass
      {
@@ -69,6 +71,18 @@
                     _gold = value;
                     OnPropertyChanged(nameof(Gold));
                }
+          }
+
+          //used ObservableCollection because with this data structure, every time it is updated it will also be updated in the UI
+          public ObservableCollection<GameItem> Inventory
+          {
+               get;
+               set;
+          }
+
+          public Player()
+          {
+               Inventory = new ObservableCollection<GameItem>();
           }
      }
 }
