@@ -80,9 +80,17 @@ namespace Engine.Models
                set;
           }
 
+          //when the player moves to a location, we check to see if it has a quest and if the player has the quest if so
+          //if the player does not have the quest, then it will be added to this Quests variable
+          public ObservableCollection<QuestStatus> Quests
+          {
+               get; set;
+          }
+
           public Player()
           {
                Inventory = new ObservableCollection<GameItem>();
+               Quests = new ObservableCollection<QuestStatus>();
           }
      }
 }
