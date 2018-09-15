@@ -10,7 +10,7 @@
      <Window.Resources>
           <BooleanToVisibilityConverter x:Key="BooleanToVisibility"></BooleanToVisibilityConverter>
      </Window.Resources>
-    <Grid>
+     <Grid>
           <Grid.RowDefinitions>
                <RowDefinition Height="Auto"></RowDefinition>
                <RowDefinition Height="*"></RowDefinition>
@@ -93,11 +93,10 @@
                                    <DataGridTextColumn Header="Description"
                                                        Binding="{Binding Name}"
                                                        Width="*"></DataGridTextColumn>
-                                   <DataGridTextColumn Header="Price" 
+                                   <DataGridTextColumn Header="Price"
                                                        Binding="{Binding Price}"
                                                        Width="*"></DataGridTextColumn>
                               </DataGrid.Columns>
-
                          </DataGrid>
                     </TabItem>
                </TabControl>
