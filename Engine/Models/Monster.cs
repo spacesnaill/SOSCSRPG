@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
@@ -14,6 +9,7 @@ namespace Engine.Models
           public string Name { get; set; }
           public string ImageName { get; set; }
           public int MaximumHitPoints { get; private set; }
+
           public int HitPoints
           {
                get { return _hitPoints; }

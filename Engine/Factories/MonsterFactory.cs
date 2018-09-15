@@ -1,9 +1,5 @@
 ﻿using Engine.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Engine.Factories
 {
@@ -20,6 +16,7 @@ namespace Engine.Factories
                          AddLootItem(snake, 9002, 75);
 
                          return snake;
+
                     case 2:
                          Monster rat = new Monster("Rat", "Rat.png", 5, 5, 5, 1);
 
@@ -27,6 +24,7 @@ namespace Engine.Factories
                          AddLootItem(rat, 9004, 75);
 
                          return rat;
+
                     case 3:
                          Monster giantSpider = new Monster("Giant Spider", "GiantSpider.png", 10, 10, 10, 3);
 
@@ -34,6 +32,7 @@ namespace Engine.Factories
                          AddLootItem(giantSpider, 9006, 75);
 
                          return giantSpider;
+
                     default:
                          throw new ArgumentException(string.Format("MonsterType '{0}' does not exist", monsterID));
                }

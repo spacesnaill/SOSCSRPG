@@ -88,13 +88,13 @@ namespace Engine.ViewModels
                     CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
                }
           }
-          
+
           private void GivePlayerQuestsAtLocation()
           {
-               foreach(Quest quest in CurrentLocation.QuestsAvailableHere)
+               foreach (Quest quest in CurrentLocation.QuestsAvailableHere)
                {
                     //if current player does not have the quest in the location, add the quest
-                    if(!CurrentPlayer.Quests.Any(q => q.PlayerQuest.ID == quest.ID))
+                    if (!CurrentPlayer.Quests.Any(q => q.PlayerQuest.ID == quest.ID))
                     {
                          CurrentPlayer.Quests.Add(new QuestStatus(quest));
                     }
