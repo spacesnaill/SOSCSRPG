@@ -22,7 +22,7 @@ namespace Engine.Models
 
           public void AddMonster(int monsterID, int chanceOfEncountering)
           {
-               if(MonstersHere.Exists(m => m.MonsterID == monsterID))
+               if (MonstersHere.Exists(m => m.MonsterID == monsterID))
                {
                     //this monster has already been added to this location
                     //so, overwrite the ChanceOfEncountering with the new number
@@ -50,15 +50,15 @@ namespace Engine.Models
 
                //loop through monster list
                //adding the monster's percentage chance of appear to the runningTotal variable
-               //when the random number is lower than the runningTotal, 
+               //when the random number is lower than the runningTotal,
                //that is the monster to return
                int runningTotal = 0;
 
-               foreach(MonsterEncounter monsterEncounter in MonstersHere)
+               foreach (MonsterEncounter monsterEncounter in MonstersHere)
                {
                     runningTotal += monsterEncounter.ChanceOfEncountering;
 
-                    if(randomNumber <= runningTotal)
+                    if (randomNumber <= runningTotal)
                     {
                          return MonsterFactory.GetMonster(monsterEncounter.MonsterID);
                     }

@@ -21,10 +21,10 @@
                <ColumnDefinition Width="250"></ColumnDefinition>
                <ColumnDefinition Width="*"></ColumnDefinition>
           </Grid.ColumnDefinitions>
-          
+
           <!-- Menu -->
           <Label Grid.Row="0" Grid.Column="0" Content="Menu" Background="LightPink"></Label>
-          
+
           <!-- Player Stats -->
           <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
                <Grid.RowDefinitions>
@@ -54,7 +54,7 @@
                <Label Grid.Row="5" Grid.Column="0" Content="Level:"></Label>
                <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"></Label>
           </Grid>
-          
+
           <!-- Gameplay -->
           <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
                <Grid.RowDefinitions>
@@ -66,7 +66,7 @@
                     <ColumnDefinition Width="3*"></ColumnDefinition>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                </Grid.ColumnDefinitions>
-               
+
                <!-- Location Info -->
                <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gainsboro" BorderThickness="1">
                     <Grid Margin="3">
@@ -89,7 +89,7 @@
                                     Text="{Binding CurrentLocation.Description}"></TextBlock>
                     </Grid>
                </Border>
-               
+
                <!-- Monster Info -->
                <Border Grid.Row="1" Grid.Column="1"
                        BorderBrush="Gainsboro"
@@ -118,14 +118,13 @@
                                      Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}"
                                      HorizontalAlignment="Center"
                                      Orientation="Horizontal">
-                              <TextBlock>Current Hit Points:</TextBlock>
+                              <TextBlock Text="Current Hit Points: "></TextBlock>
                               <TextBlock Text="{Binding CurrentMonster.HitPoints}" ></TextBlock>
                          </StackPanel>
                     </Grid>
                </Border>
-               
           </Grid>
-          
+
           <!-- Inventory and Quests -->
           <Grid Grid.Row="2" Grid.Column="0" Background="BurlyWood">
                <TabControl>
@@ -144,7 +143,7 @@
                               </DataGrid.Columns>
                          </DataGrid>
                     </TabItem>
-                    
+
                     <!-- Quests -->
                     <TabItem Header="Quests">
                          <DataGrid ItemsSource="{Binding CurrentPlayer.Quests}"
@@ -162,7 +161,7 @@
                     </TabItem>
                </TabControl>
           </Grid>
-          
+
           <!-- Controls -->
           <Grid Grid.Row="2" Grid.Column="1" Background="Lavender">
                <Grid.RowDefinitions>
