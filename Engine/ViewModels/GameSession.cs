@@ -24,8 +24,27 @@ namespace Engine.ViewModels
                     OnPropertyChanged(nameof(HasLocationToWest));
 
                     GivePlayerQuestsAtLocation();
+                    GetMonsterAtLocation();
                }
           }
+
+          private Monster _currentMonster;
+
+          public Monster CurrentMonster
+          {
+               get { return _currentMonster; }
+               set
+               {
+                    _currentMonster = value;
+
+                    OnPropertyChanged(nameof(CurrentMonster));
+                    OnPropertyChanged(nameof(HasMonster));
+               }
+          }
+
+          //expression body
+          // => is the same as 'return' the calculation on the right
+          public bool HasMonster => CurrentMonster != null;
 
           public bool HasLocationToNorth
           {
@@ -99,6 +118,11 @@ namespace Engine.ViewModels
                          CurrentPlayer.Quests.Add(new QuestStatus(quest));
                     }
                }
+          }
+
+          private void GetMonsterAtLocation()
+          {
+               CurrentMonster = CurrentLocation.GetMonster();
           }
      }
 }

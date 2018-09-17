@@ -12,6 +12,8 @@ namespace Engine.Factories
                     "There are rows of corn growing here, with giant rats hiding between them.",
                     "/Engine;component/Images/Locations/FarmFields.png");
 
+               newWorld.LocationAt(-2, -1).AddMonster(2, 100); //add rat to farmer's field
+
                newWorld.AddLocation(-1, -1, "Farmer's House",
                     "This is the house of your neighbor, Farmer Ted.",
                     "/Engine;component/Images/Locations/Farmhouse.png");
@@ -36,6 +38,8 @@ namespace Engine.Factories
                     "The trees in this forest are covered with spider webs.",
                     "/Engine;component/Images/Locations/SpiderForest.png");
 
+               newWorld.LocationAt(2, 0).AddMonster(3, 100); //add spider to spider forest
+
                newWorld.AddLocation(0, 1, "Herbalist's hut",
                     "You see a small hut, with plants drying from the roof.",
                     "/Engine;component/Images/Locations/HerbalistsHut.png");
@@ -45,6 +49,8 @@ namespace Engine.Factories
                newWorld.AddLocation(0, 2, "Herbalist's Garden",
                     "There are many plants, with snakes hiding behind them.",
                     "/Engine;component/Images/Locations/HerbalistsGarden.png");
+
+               newWorld.LocationAt(0, 2).AddMonster(1, 100); //add snake to herbalist's garden
 
                return newWorld;
           }
